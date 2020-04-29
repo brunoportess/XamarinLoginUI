@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:custom="clr-namespace:XamarinLoginUI.Controls;assembly=XamarinLoginUI"
+             x:Class="XamarinLoginUI.Views.Login1"
+             BackgroundImageSource="bglogin.jpg"
+             Padding="0">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        
+
+
+        <BoxView Opacity="0.3" BackgroundColor="DarkBlue" Grid.Column="0" Grid.RowSpan="2" Grid.Row="0"></BoxView>
+
+        <StackLayout Orientation="Vertical" Padding="15,30,15,0" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+            <Label TextColor="#FFFFFF" Text="Bem-vindo" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label TextColor="#FFFFFF" Text="Informe suas credenciais para acessar" FontSize="Subtitle" HorizontalOptions="Center" Margin="0,5,0,20"></Label>
+
+            <Frame CornerRadius="25" Margin="0" Padding="0" BackgroundColor="Transparent">
+                <Grid RowSpacing="0" ColumnSpacing="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    BackgroundColor="#FFFFFF"
+                    Opacity="0.3"
+                    ></BoxView>
+
+                    <FlexLayout Direction="Row"
+                             Padding="15,5"
+                            AlignItems="Center"
+                             Grid.Column="0"
+                    Grid.Row="0">
+                        <Image Source="baseline_person_white_24dp.png"
+                           Opacity="0.5"
+                   HeightRequest="30"
+                ></Image>
+                        <custom:EntryControl
+                    Placeholder="Usuário"
+                        HorizontalOptions="FillAndExpand"
+                    HideUnderline="True"
+                    TextColor="#FFFFFF"
+                            PlaceholderColor="#EEEEEE"
+                ></custom:EntryControl>
+                    </FlexLayout>
+                </Grid>
+            </Frame>
+
+            <Frame CornerRadius="25" Margin="0,10" Padding="0" BackgroundColor="Transparent">
+                <Grid RowSpacing="0" ColumnSpacing="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    BackgroundColor="#FFFFFF"
+                    Opacity="0.3"
+                    ></BoxView>
+
+                    <FlexLayout Direction="Row"
+                             Padding="15,5"
+                            AlignItems="Center"
+                             Grid.Column="0"
+                    Grid.Row="0">
+                        <Image Source="baseline_lock_white_24dp.png"
+                           Opacity="0.5"
+                   HeightRequest="30"
+                ></Image>
+                        <custom:EntryControl
+                    Placeholder="Senha"
+                            TextColor="#FFFFFF"
+                            PlaceholderColor="#EEEEEE"
+                        HorizontalOptions="FillAndExpand"
+                    HideUnderline="True"
+                    
+                ></custom:EntryControl>
+                    </FlexLayout>
+                </Grid>
+            </Frame>
+
+            <Label Text="Esqueceu a senha?" TextColor="#FFF" HorizontalOptions="EndAndExpand" Margin="0,0,0,30"></Label>
+
+            <Button Text="LOGIN" FontSize="Large" FontAttributes="Bold" CornerRadius="25" TextColor="#FFF" BackgroundColor="#FF4646"></Button>
+
+            <Label HorizontalOptions="Center" FontSize="Small" Margin="0,30,0,0" TextColor="#EEEEEE">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Não possui uma conta? "></Span>
+                            <Span Text="Crie uma aqui" TextColor="#FF4646"></Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+
+        <Image Margin="20" 
+               
+               HorizontalOptions="Start"
+               x:Name="closePageArrow" 
+               Source="baseline_arrow_back_white_24dp.png" Grid.Column="0" Grid.Row="0">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</ContentPage>
