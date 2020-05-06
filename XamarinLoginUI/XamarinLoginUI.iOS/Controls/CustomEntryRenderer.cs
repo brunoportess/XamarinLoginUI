@@ -1,4 +1,5 @@
-﻿using CoreGraphics;
+﻿using CoreAnimation;
+using CoreGraphics;
 using System;
 using UIKit;
 using Xamarin.Forms;
@@ -11,9 +12,11 @@ namespace XamarinLoginUI.iOS.Controls
 {
     public class CustomEntryRenderer : EntryRenderer
     {
+        private CALayer _underlineColor;
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
+            _underlineColor = null;
 
             if (e.NewElement != null)
             {
@@ -38,6 +41,15 @@ namespace XamarinLoginUI.iOS.Controls
                     Control.Layer.CornerRadius = 10;
                     Control.TextColor = UIColor.White;
                 }
+
+                _underlineColor = new CALayer
+                {
+                    BorderColor = view.UnderlineColor.ToCGColor(),
+                    BackgroundColor = view.UnderlineColor.ToCGColor(),
+                    Frame = new CGRect(0, Frame.Height / 2, Frame.Width * 2, 1f)
+                };
+
+                Control.Layer.AddSublayer(_underlineColor);
             }
         }
     }

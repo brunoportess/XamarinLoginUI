@@ -18,5 +18,10 @@ namespace XamarinLoginUI
         {
             await Navigation.PushModalAsync(new Login1());
         }
+
+        private async void login2_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Login2());
+        }
     }
 }

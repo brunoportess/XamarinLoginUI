@@ -1,6 +1,7 @@
 ﻿using Android.Content;
 using Android.Content.Res;
 using Android.Graphics.Drawables;
+using Android.OS;
 using Android.Text;
 using Android.Util;
 using System;
@@ -53,7 +54,13 @@ namespace XamarinLoginUI.Droid.Controls
                     this.Control.SetRawInputType(InputTypes.TextFlagNoSuggestions);
                     //Control.SetHintTextColor(ColorStateList.ValueOf(global::Android.Graphics.Color.Transparent));
                 }
-                
+
+                Control.BackgroundTintList = ColorStateList.ValueOf(view.UnderlineColor.ToAndroid());
+                /*if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
+                    Control.BackgroundTintList = ColorStateList.ValueOf(view.UnderlineColor.ToAndroid());
+                else
+                    Control.Background.SetColorFilter(Color.White, PorterDuff.Mode.SrcAtop);*/
+
             }
         }
         public static float DpToPixels(Context context, float valueInDp)

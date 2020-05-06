@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:custom="clr-namespace:XamarinLoginUI.Controls;assembly=XamarinLoginUI"
+             x:Class="XamarinLoginUI.Views.Login2"
+             BackgroundColor="#00a0f7">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="MIDDUU" FontSize="Title" HorizontalOptions="Center" Margin="0,30" FontAttributes="Bold" TextColor="#FFFFFF"></Label>
+            <Frame VerticalOptions="Center" BackgroundColor="#FFFFFF" CornerRadius="15">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="LOGIN" TextColor="#0997d9" FontSize="Title" Margin="0,0,0,20" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                    
+                    <Label Text="Usuário" TextColor="#0997d9" FontSize="Small"></Label>
+                    <custom:EntryControl
+                        Placeholder="exemplo@email.com"
+                        HorizontalOptions="FillAndExpand"
+                        UnderlineColor="#0997d9"
+                ></custom:EntryControl>
+
+                    <Label Text="Senha" TextColor="#0997d9" FontSize="Small" Margin="0,20,0,0" Padding="0" ></Label>
+                    <custom:EntryControl
+                        Placeholder="***********"
+                        IsPassword="True"
+                        HorizontalOptions="FillAndExpand"
+                        UnderlineColor="#0997d9"
+                ></custom:EntryControl>
+                    <Label Text="Esqueceu sua senha?" TextColor="#0997d9" FontSize="Micro" HorizontalOptions="End"></Label>
+                    <Button Text="ACESSAR" BackgroundColor="#65c9f4" FontSize="Large" FontAttributes="Bold" TextColor="#FFFFFF" CornerRadius="25" Margin="0,50,0,0" ></Button>
+                    <Label Text="Não possui uma conta? Clique aqui!" HorizontalOptions="Center" TextColor="#0997d9" FontSize="Small" FontAttributes="Bold" Margin="0,20" Padding="0" ></Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

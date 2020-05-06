@@ -10,6 +10,7 @@
 
     <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
         <Button x:Name="login1" Style="{StaticResource buttonStyle}" Text="LOGIN 1" Clicked="login1_Clicked"></Button>
+        <Button x:Name="login2" Style="{StaticResource buttonStyle}" Text="LOGIN 2" Clicked="login2_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
