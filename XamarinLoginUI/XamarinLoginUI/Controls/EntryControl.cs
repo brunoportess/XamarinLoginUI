@@ -52,7 +52,7 @@ namespace XamarinLoginUI.Controls
             set => SetValue(HideUnderlineProperty, value);
         }
 
-        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(EntryControl), Color.Blue);
+        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(EntryControl), Color.Transparent);
         // Gets or sets BorderColor value  
         public Color UnderlineColor
         {

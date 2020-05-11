@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:XamarinLoginUI.Controls;assembly=XamarinLoginUI"
+             mc:Ignorable="d"
+             x:Class="XamarinLoginUI.Views.Login3"
+             >
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"
+                    >
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="cellphone.jpg"
+                       Aspect="AspectFill"
+                   Grid.Row="0"
+                       Grid.Column="0"
+                       Opacity="0.6"
+                   ></Image>
+                <StackLayout 
+                    Padding="20"
+                    VerticalOptions="Center"
+                   Grid.Row="0"
+                       Grid.Column="0"      
+                         >
+                    <Label Text="Login"
+                   FontSize="Title"
+                           TextColor="#FFF"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                 />
+                    <Image Source="icon.png"
+                   Margin="0,20"
+                   ></Image>
+                    <custom:EntryControl
+                        HideUnderline="True"
+                        CornerRadius="45"
+                        IsCurvedCornersEnabled="True"
+                        BorderWidth="5"
+                        BorderColor="Red"
+                        Margin="0,5"
+                        BackgroundColor="#d7eff3"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="@usuario"></custom:EntryControl>
+                    <custom:EntryControl
+                        IsPassword="True"
+                        HideUnderline="True"
+                        CornerRadius="15"
+                        Margin="0,5"
+                        BackgroundColor="#d7eff3"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="senha"
+                        UnderlineColor="#0997d9"></custom:EntryControl>
+                    <Button Text="ENTRAR!"
+                        Margin="0,20,0,40"
+                        Padding="30,0"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Center"
+                        BorderColor="#FFF"
+                        TextColor="#FFF"
+                        FontSize="Large"
+                        BorderWidth="1"
+                        CornerRadius="10"></Button>
+                </StackLayout>
+            </Grid>
+            <FlexLayout 
+                        Direction="Column"
+                         FlexLayout.Grow="1"
+                JustifyContent="Center"
+                BackgroundColor="#eff3f7">
+                <Button Text="Logar com facebook" 
+                        CornerRadius="7"
+                        Margin="20,5"
+                        TextColor="#FFF"
+                        BackgroundColor="#5185c6"></Button>
+                <Button Text="Logar com google"
+                        Margin="20,5,20,20"
+                        CornerRadius="7"></Button>
+                <Label Text="Criar Conta" HorizontalOptions="Center" FontSize="Medium" TextColor="#000" HorizontalTextAlignment="Center"></Label>
+                <BoxView HeightRequest="0.5" BackgroundColor="#CCC" HorizontalOptions="Center" Margin="50,10,50,0"></BoxView>
+            </FlexLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
